@@ -24,14 +24,77 @@ function App() {
   }, [html, css, js])
 
   function collapseEditorHTML() {
+    
     console.log("workingHTML");
+    var x = document.getElementsByClassName("htmlE");
+    var i;
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "block";
+    }
+
+    console.log("workingHTML");
+    var y = document.getElementsByClassName("cssE");
+    var j;
+    for (j = 0; j < y.length; j++) {
+      y[j].style.display = "none";
+    }
+
+    console.log("workingHTML");
+    var z = document.getElementsByClassName("jsE");
+    var k;
+    for (k = 0; k < z.length; k++) {
+      z[k].style.display = "none";
+    }
+
 
   }
   function collapseEditorCSS() {
     console.log("workingCSs");
+    var x = document.getElementsByClassName("htmlE");
+    var i;
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+
+    console.log("workingHTML");
+    var y = document.getElementsByClassName("cssE");
+    var j;
+    for (j = 0; j < y.length; j++) {
+      y[j].style.display = "block";
+    }
+
+    console.log("workingHTML");
+    var z = document.getElementsByClassName("jsE");
+    var k;
+    for (k = 0; k < z.length; k++) {
+      z[k].style.display = "none";
+    }
+
+
   }
   function collapseEditorJS() {
     console.log("workingJS");
+    var x = document.getElementsByClassName("htmlE");
+    var i;
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+
+    console.log("workingHTML");
+    var y = document.getElementsByClassName("cssE");
+    var j;
+    for (j = 0; j < y.length; j++) {
+      y[j].style.display = "none";
+    }
+
+    console.log("workingHTML");
+    var z = document.getElementsByClassName("jsE");
+    var k;
+    for (k = 0; k < z.length; k++) {
+      z[k].style.display = "block";
+    }
+
+
   }
   return (
     <>
@@ -42,9 +105,9 @@ function App() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#link" onClick={collapseEditorHTML}>index.html</Nav.Link>
-              <Nav.Link href="#link" onClick={collapseEditorCSS}>index.css</Nav.Link>
-              <Nav.Link href="#link" onClick={collapseEditorJS}>index.js</Nav.Link>
+              <Nav.Link href="#html" onClick={collapseEditorHTML}>index.html</Nav.Link>
+              <Nav.Link href="#css" onClick={collapseEditorCSS}>index.css</Nav.Link>
+              <Nav.Link href="#js" onClick={collapseEditorJS}>index.js</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
